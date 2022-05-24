@@ -2,14 +2,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using StoreData.DataAccess.EntityConfiguration;
+using Voxel.Billback.Infrastructure.Repositories;
 
 namespace StoreData.DataAccess.Repositories
 {
-    public class PatientRepository : IPatientRepository
+    public class PatientRepository : BaseRepository<Patient>, IPatientRepository
     {
         private readonly List<Patient> _patients;
 
-        public PatientRepository()
+        public PatientRepository(TransactionContext transactionContext) : base(transactionContext)
         {
             _patients = new List<Patient>
             {
@@ -23,7 +25,12 @@ namespace StoreData.DataAccess.Repositories
 
         public Guid Add(AddPatientRequest addedPatient)
         {
+
             var patient = new Patient(Guid.NewGuid(), addedPatient.Name, addedPatient.Surname1, addedPatient.Surname2, addedPatient.Number);
+
+            transactionContext.Add(patient);
+            transactionContext.SaveChanges();
+
             return patient.Id;
         }
 
