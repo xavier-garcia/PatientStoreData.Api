@@ -24,9 +24,17 @@ namespace StoreDataApi.Controllers
 
         [HttpGet]
         [ProducesResponseType((int)HttpStatusCode.OK)]
+        public ActionResult<List<Patient>> Get()
+        {
+            return Ok(_patientRepository.Get());
+        }
+
+        [HttpGet]
+        [Route("{number}")]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
         public ActionResult<Patient> Get(int number)
         {
-            return _patientRepository.Get(number);
+            return Ok(_patientRepository.Get(number));
         }
 
         [HttpPost]
