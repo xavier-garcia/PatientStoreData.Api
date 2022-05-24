@@ -3,11 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreDataApi", "src\StoreDataApi\StoreDataApi.csproj", "{1955B15F-749F-47C6-A6AE-8915BD3BDAAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreDataApi", "src\StoreDataApi\StoreDataApi.csproj", "{1955B15F-749F-47C6-A6AE-8915BD3BDAAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreData.DataAccess", "src\StoreData.DataAccess\StoreData.DataAccess.csproj", "{0EA408B2-D306-401B-9A79-3E92976A0696}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreData.DataAccess", "src\StoreData.DataAccess\StoreData.DataAccess.csproj", "{0EA408B2-D306-401B-9A79-3E92976A0696}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorePatientData", "src\StorePatientData\StorePatientData.csproj", "{EFC226E3-1CCE-4325-B157-092C53860F9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorePatientData", "src\StorePatientData\StorePatientData.csproj", "{EFC226E3-1CCE-4325-B157-092C53860F9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{E89DEF69-1C8C-4F5A-BAA5-F813EA527610}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{55BAEC6D-897B-4327-A8E2-F92C5BD5583D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{40D0F4DA-B841-4169-927D-168E82F6F88A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +36,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1955B15F-749F-47C6-A6AE-8915BD3BDAAF} = {55BAEC6D-897B-4327-A8E2-F92C5BD5583D}
+		{0EA408B2-D306-401B-9A79-3E92976A0696} = {E89DEF69-1C8C-4F5A-BAA5-F813EA527610}
+		{EFC226E3-1CCE-4325-B157-092C53860F9D} = {40D0F4DA-B841-4169-927D-168E82F6F88A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AFDEC1DA-8BA7-4409-9458-09CB1CF83AFC}
