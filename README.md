@@ -1,5 +1,5 @@
 # Patient Data Store
-POC of a Api
+POC of an Api with Swagger, Authentification
 
 ### How to generate database
 From Package manager console:
